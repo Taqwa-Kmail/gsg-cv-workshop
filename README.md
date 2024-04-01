@@ -1,15 +1,14 @@
-# gsg-cvc-workshop
 # AI-Enhanced Image Stitching and Edge Detection
 
-Overview
+# Overview
 This project demonstrates the integration of AI-based image processing techniques with web development using Flask, enabling users to interactively stitch images and perform edge detection tasks through a web interface.
 
 
-Usage
+# Usage
 To access the project, open the web browser and navigate to [http://127.0.0.1:5000/].
 
 
-General Architecture
+# General Architecture
 The project involves the integration of frontend and backend components. The flask serves as the backbone of the application, coordinating the communication between the frontend and processing functionalities.
 1-	Frontend Interface: HTML/CSS/JavaScript for user interaction.
 2-	Backend Server: Flask handles HTTP requests and responses.
@@ -18,7 +17,7 @@ The project involves the integration of frontend and backend components. The fla
 5-	numerical computing: numpy Library.
 6-	path operations: posixpath Library, for manipulating paths in a POSIX-compliant way.
 
-About the pages
+# About the pages
 1-	app.py: This file contains the Flask application with several routes, to handle both GET and POST requests.
 2-	index.html: This HTML file provides a form for uploading images, using a POST request to submit the images to the server.
 3-	results.html: This file displays the stitched panoramic image and individual images uploaded by the user.
@@ -26,7 +25,7 @@ About the pages
 5-	styles.css: The CSS file contains styles for the application's layout and components, ensuring a visually appealing and user-friendly interface.
 
 
-Functions
+# Functions
 
 def allowed_file(filename):
 This function checks if the file extension is allowed based on a predefined set of allowed extensions. It returns True if allowed, otherwise False.
