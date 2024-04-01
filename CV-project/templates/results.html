@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Stitching Results</title>
+    <link rel="stylesheet" href="../static/Css/styles.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Image Stitching Results</h1>
+        
+        <h2>Individual Images:</h2>
+        <div class="image-gallery">
+            {% for filename in filenames %}
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="{{ filename }}">
+            {% endfor %}
+        </div>
+
+        {% if stitched_filename %}
+            <h2>Stitched Panoramic Image:</h2>
+            <img src="{{ url_for('static', filename='uploads/' + stitched_filename) }}" alt="Stitched Panoramic Image">
+          
+            <form class="edge-form" action="{{ url_for('edge_result') }}" method="post">
+                <input type="hidden" name="edge_filename" value="{{ edge_filename }}">
+                <button type="submit">View Edge Result</button>
+            </form>                
+        {% else %}
+            <p>Failed to stitch images.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

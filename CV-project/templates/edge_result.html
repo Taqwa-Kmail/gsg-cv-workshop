@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Detection Result</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  
+
+    <img id="edgeImage" src="{{ url_for('static', filename=edge_image_path.split('static/')[1]) }}" alt="Edge Image">
+]
+    <div>
+        <label for="kernelSize">Kernel Size:</label>
+        <input type="range" min="1" max="10" value="3" class="slider" id="kernelSize">
+        <button id="applyKernel">Apply Kernel</button>
+    </div>
+
+    <script>
+       $(document).ready(function() {
+    $('#applyKernel').click(function() {
+        var kernelSize = $('#kernelSize').val();
+        var edgeImagePath = "{{ url_for('static', filename=edge_filename) }}";  
+        $.ajax({
+            type: 'POST',
+            url: '/adjust_kernel',
+            data: {'kernel_size': kernelSize, 'edge_image_path': edgeImagePath},
+            success: function(data) {
+                $('#edgeImage').attr('src', data);
+            },
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
+    });
+});
+
+    </script>
+
+
+    
+   
+
+</body>
+</html>
+
+        

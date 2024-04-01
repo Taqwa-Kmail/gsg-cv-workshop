@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    text-align: center;
+}
+
+.header {
+    background-color: #08A8A8;
+    color: #fff;
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.upload-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+input[type="file"] {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    border: 2px solid #08A8A8;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover,
+input[type="file"]:focus {
+    border-color: #055252;
+}
+
+button[type="submit"] {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #08A8A8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #055252;
+}
+button[type="submit"]:hover {
+    background-color: #055252;
+    color: #fff;
+}
+
+input[type="file"]:hover,
+input[type="file"]:focus {
+    border-color: #055252;
+}
+
+/* Results page styles */
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.results-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.results-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.results-container .edge-form {
+    margin-top: 20px;
+}
+
+.results-container .edge-form button[type="submit"] {
+    background-color: #08A8A8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.results-container .edge-form button[type="submit"]:hover {
+    background-color: #055252;
+}
+
+
