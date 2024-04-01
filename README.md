@@ -43,6 +43,7 @@ def adjust_kernel():
 This function receives a POST request with a new kernel size for morphological operation.
 
 
+![Screenshot 2024-03-30 041636](https://github.com/Taqwa-Kmail/gsg-cvc-workshop/assets/114935730/ab5395b1-7d9d-4916-bbbd-fd6241f96f1c)
 
 
 
